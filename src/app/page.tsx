@@ -1,7 +1,6 @@
 import Hero from "@/components/Hero";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing/Pricing";
-import FAQ from "@/components/FAQ";
 import Logos from "@/components/Logos";
 import Benefits from "@/components/Benefits/Benefits";
 import Container from "@/components/Container";
@@ -16,7 +15,6 @@ const HomePage: React.FC = () => {
       <Logos />
       <Container>
         <Benefits />
-
         <Section
           id="pricing"
           title="Pricing"
@@ -24,7 +22,6 @@ const HomePage: React.FC = () => {
         >
           <Pricing />
         </Section>
-
         <Section
           id="testimonials"
           title="What Our Clients Say"
@@ -32,11 +29,7 @@ const HomePage: React.FC = () => {
         >
           <Testimonials />
         </Section>
-
-        <FAQ />
-
         <Stats />
-        
         <CTA />
       </Container>
     </>
