@@ -5,6 +5,7 @@ export const footerDetails: {
   quickLinks: IMenuItem[];
   email: string;
   telephone: string;
+  policies: IMenuItem[];
   socials: ISocials;
 } = {
   subheading: "The modern golf champion",
@@ -20,6 +21,16 @@ export const footerDetails: {
   ],
   email: "puttr.official@gmail.com",
   telephone: "+1 (123) 456-7890",
+  policies: [
+    {
+      text: "Privacy Policy",
+      url: "https://ylawler.github.io/puttr-legal/privacy-policy.html",
+    },
+    {
+      text: "Terms of Service",
+      url: "https://ylawler.github.io/puttr-legal/terms-of-service.html",
+    },
+  ],
   socials: {
     // facebook: 'https://facebook.com',
     // youtube: 'https://youtube.com',

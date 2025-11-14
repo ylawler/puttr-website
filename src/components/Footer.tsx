@@ -6,7 +6,7 @@ import { getPlatformIconByName } from "../utils";
 
 function Footer() {
   const { siteName } = siteDetails;
-  const { quickLinks, email, socials, subheading } = footerDetails;
+  const { quickLinks, email, socials, policies } = footerDetails;
 
   return (
     <footer className="bg-hero-background text-foreground py-10">
@@ -18,7 +18,19 @@ function Footer() {
               {siteName}
             </h3>
           </Link>
-          <p className="mt-3.5 text-foreground-accent">{subheading}</p>
+          <div>
+            {policies.map((policy) => (
+              <Link
+                href={policy.url}
+                key={policy.text}
+                className="block mt-2 text-foreground-accent hover:text-foreground"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {policy.text}
+              </Link>
+            ))}
+          </div>
         </div>
         <div>
           <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
