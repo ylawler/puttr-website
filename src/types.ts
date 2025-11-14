@@ -46,6 +46,7 @@ export interface ISocials {
   facebook?: string;
   github?: string;
   instagram?: string;
+  tiktok?: string;
   linkedin?: string;
   threads?: string;
   twitter?: string;

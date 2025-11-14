@@ -2,14 +2,10 @@ interface Props {
   id: string;
   title: string;
   description: string;
+  children: React.ReactNode;
 }
 
-const Section: React.FC<React.PropsWithChildren<Props>> = ({
-  id,
-  title,
-  description,
-  children,
-}: React.PropsWithChildren<Props>) => {
+function Section({ id, title, description, children }: Props) {
   return (
     <section id={id} className="py-10 lg:py-20">
       <h2 className="text-center mb-4 text-3xl lg:text-5xl lg:leading-tight font-bold">
@@ -19,6 +15,6 @@ const Section: React.FC<React.PropsWithChildren<Props>> = ({
       {children}
     </section>
   );
-};
+}
 
 export default Section;

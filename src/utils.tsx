@@ -8,6 +8,7 @@ import {
   FaTwitter,
   FaXTwitter,
   FaYoutube,
+  FaTiktok,
 } from "react-icons/fa6";
 
 export const getPlatformIconByName = (
@@ -22,6 +23,9 @@ export const getPlatformIconByName = (
     }
     case "instagram": {
       return <FaInstagram size={24} className="min-w-fit" />;
+    }
+    case "tiktok": {
+      return <FaTiktok size={24} className="min-w-fit" />;
     }
     case "linkedin": {
       return <FaLinkedin size={24} className="min-w-fit" />;

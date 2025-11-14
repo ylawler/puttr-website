@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { motion, Variants } from "framer-motion";
 
 import BenefitBullet from "./BenefitBullet";
-import { IBenefit } from "@/types";
+import { IBenefit } from "../../types";
 
 interface Props {
   benefit: IBenefit;
@@ -44,9 +44,8 @@ export const childVariants = {
   },
 };
 
-const BenefitSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
+function BenefitSection({ benefit, imageAtRight }: Props) {
   const { title, description, imageSrc, bullets } = benefit;
-
   return (
     <section className="benefit-section">
       <motion.div
@@ -62,7 +61,7 @@ const BenefitSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
             "lg:order-1 justify-end": !imageAtRight,
           })}
         >
-          <div className="w-full  text-center lg:text-left ">
+          <div className="w-full text-center lg:text-left ">
             <motion.div
               className="flex flex-col w-full"
               variants={childVariants}
@@ -70,11 +69,12 @@ const BenefitSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
               <h3 className="lg:max-w-2xl text-3xl lg:text-5xl lg:leading-tight font-bold">
                 {title}
               </h3>
-              <p className="mt-1.5 mx-auto lg:ml-0 leading-normal text-foreground-accent">
-                {description}
-              </p>
+              {description && (
+                <p className="mt-1.5 mx-auto lg:ml-0 leading-normal text-foreground-accent">
+                  {description}
+                </p>
+              )}
             </motion.div>
-
             <div className="mx-auto lg:ml-0 w-full">
               {bullets.map((item, index) => (
                 <BenefitBullet
@@ -87,7 +87,6 @@ const BenefitSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
             </div>
           </div>
         </div>
-
         <div className={clsx("mt-5 lg:mt-0", { "lg:order-2": imageAtRight })}>
           <div
             className={clsx("w-fit flex", {
@@ -108,6 +107,6 @@ const BenefitSection: React.FC<Props> = ({ benefit, imageAtRight }: Props) => {
       </motion.div>
     </section>
   );
-};
+}
 
 export default BenefitSection;

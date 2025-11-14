@@ -15,6 +15,7 @@ const config: Config = {
         secondary: "var(--secondary)",
 
         "primary-accent": "var(--primary-accent)",
+        "secondary-accent": "var(--secondary-accent)",
         "foreground-accent": "var(--foreground-accent)",
         "hero-background": "var(--hero-background)",
       },
