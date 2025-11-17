@@ -7,28 +7,30 @@ export const footerDetails: {
   telephone: string;
   policies: IMenuItem[];
   socials: ISocials;
+  companyName: string;
 } = {
   subheading: "The modern golf champion",
   quickLinks: [
     {
       text: "Features",
-      url: "#features",
+      to: "#features",
     },
     {
       text: "Pricing",
-      url: "#pricing",
+      to: "#pricing",
     },
   ],
   email: "puttr.official@gmail.com",
   telephone: "+1 (123) 456-7890",
+  companyName: "Yannick Alexander Lawler",
   policies: [
     {
       text: "Privacy Policy",
-      url: "https://ylawler.github.io/puttr-legal/privacy-policy.html",
+      to: "/privacy-policy",
     },
     {
       text: "Terms of Service",
-      url: "https://ylawler.github.io/puttr-legal/terms-of-service.html",
+      to: "/terms-conditions",
     },
   ],
   socials: {

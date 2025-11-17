@@ -3,10 +3,10 @@ import { IMenuItem } from "../types";
 export const menuItems: IMenuItem[] = [
   {
     text: "Features",
-    url: "#features",
+    to: "#features",
   },
   // {
   //   text: "Pricing",
-  //   url: "#pricing",
+  //   to: "#pricing",
   // },
 ];

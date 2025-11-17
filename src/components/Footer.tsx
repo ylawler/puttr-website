@@ -6,7 +6,7 @@ import { getPlatformIconByName } from "../utils";
 
 function Footer() {
   const { siteName } = siteDetails;
-  const { quickLinks, email, socials, policies } = footerDetails;
+  const { quickLinks, email, socials, policies, companyName } = footerDetails;
 
   return (
     <footer className="bg-hero-background text-foreground py-10">
@@ -21,11 +21,9 @@ function Footer() {
           <div>
             {policies.map((policy) => (
               <Link
-                href={policy.url}
+                href={policy.to}
                 key={policy.text}
                 className="block mt-2 text-foreground-accent hover:text-foreground"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 {policy.text}
               </Link>
@@ -37,7 +35,7 @@ function Footer() {
           <ul className="text-foreground-accent">
             {quickLinks.map((link) => (
               <li key={link.text} className="mb-2">
-                <Link href={link.url} className="hover:text-foreground">
+                <Link href={link.to} className="hover:text-foreground">
                   {link.text}
                 </Link>
               </li>
@@ -77,7 +75,7 @@ function Footer() {
       </div>
       <div className="mt-8 md:text-center text-foreground-accent px-6">
         <p>
-          Copyright &copy; {new Date().getFullYear()} {siteName}. All rights
+          Copyright &copy; {new Date().getFullYear()} {companyName}. All rights
           reserved.
         </p>
       </div>

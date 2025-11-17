@@ -19,7 +19,7 @@ function Header() {
             {menuItems.map((item) => (
               <li key={item.text}>
                 <Link
-                  href={item.url}
+                  href={item.to}
                   className="text-foreground hover:text-foreground-accent transition-colors"
                 >
                   {item.text}

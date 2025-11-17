@@ -2,7 +2,7 @@ import { JSX } from "react";
 
 export interface IMenuItem {
   text: string;
-  url: string;
+  to: string;
 }
 
 export interface IBenefit {
