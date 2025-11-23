@@ -3,10 +3,12 @@ import Link from "next/link";
 import { siteDetails } from "../data/siteDetails";
 import { footerDetails } from "../data/footer";
 import { getPlatformIconByName } from "../utils";
+import Image from "next/image";
 
 function Footer() {
   const { siteName } = siteDetails;
-  const { quickLinks, email, socials, policies, companyName } = footerDetails;
+  const { quickLinks, email, socials, policies, companyName, kofi } =
+    footerDetails;
 
   return (
     <footer className="bg-hero-background text-foreground py-10">
@@ -69,6 +71,14 @@ function Footer() {
                   );
                 }
               })}
+              <a href={kofi.link} target="_blank" rel="noopener noreferrer">
+                <Image
+                  src={kofi.imageSrc}
+                  alt="Support me on Ko-fi"
+                  width={175}
+                  height={35}
+                />
+              </a>
             </div>
           )}
         </div>

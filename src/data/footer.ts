@@ -8,6 +8,7 @@ export const footerDetails: {
   policies: IMenuItem[];
   socials: ISocials;
   companyName: string;
+  kofi: { link: string; imageSrc: string };
 } = {
   subheading: "The modern golf champion",
   quickLinks: [
@@ -38,5 +39,9 @@ export const footerDetails: {
     // youtube: 'https://youtube.com',
     tiktok: "https://www.tiktok.com/@puttr.official",
     instagram: "https://www.instagram.com/puttr.golf",
+  },
+  kofi: {
+    link: "https://ko-fi.com/puttr",
+    imageSrc: "/images/support_me_on_kofi_beige.png",
   },
 };

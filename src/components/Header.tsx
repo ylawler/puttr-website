@@ -15,6 +15,12 @@ function Header() {
               {siteDetails.siteName}
             </span>
           </Link>
+          <Link
+            href="#cta"
+            className="md:hidden text-black bg-secondary hover:bg-secondary-accent px-4 text-sm py-1 rounded-full transition-colors"
+          >
+            Download
+          </Link>
           <ul className="hidden md:flex space-x-6">
             {menuItems.map((item) => (
               <li key={item.text}>
